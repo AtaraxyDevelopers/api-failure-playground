@@ -20,7 +20,7 @@ button.addEventListener('click', async () => {
         ? ' · Retry-After: ' + response.headers.get('retry-after') + ' seconds'
         : '');
   } catch {
-    status.textContent = 'Network connection failed as requested.';
+    status.textContent = 'Network request failed. The disconnect scenario does this intentionally.';
     result.textContent = 'Handle this in your client catch block.';
   } finally {
     button.disabled = false;
