@@ -1,0 +1,47 @@
+body {
+  font:
+    18px/1.6 system-ui,
+    sans-serif;
+  background: #f3f6fa;
+  color: #142338;
+  margin: 0;
+}
+main {
+  max-width: 850px;
+  margin: 8vh auto;
+  padding: 28px;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+}
+button,
+select {
+  font: inherit;
+  padding: 10px 16px;
+  margin: 12px 8px 12px 0;
+}
+button {
+  background: #174baf;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+}
+button:disabled {
+  opacity: 0.7;
+}
+label {
+  display: block;
+}
+pre {
+  background: #142338;
+  color: #e8f0ff;
+  padding: 24px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border-radius: 12px;
+}
+:focus-visible {
+  outline: 3px solid #b45309;
+  outline-offset: 4px;
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>API Failure Playground</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <p>ATARAXY DEVELOPERS · OPEN SOURCE</p>
+      <h1>Make failure predictable.</h1>
+      <p>
+        Exercise your client against controlled HTTP failures. Everything on this page uses this
+        local server.
+      </p>
+      <label for="scenario">Response scenario</label
+      ><select id="scenario">
+        <option>success</option>
+        <option>empty</option>
+        <option>slow</option>
+        <option>unauthorized</option>
+        <option>rate-limit</option>
+        <option>server-error</option>
+        <option>malformed</option>
+        <option>flaky</option>
+        <option>disconnect</option></select
+      ><button id="run">Send request</button>
+      <p id="status" role="status">Ready.</p>
+      <pre id="result" aria-label="Response body">Select a scenario, then send a request.</pre>
+      <p>
+        Flaky returns two failures, then one success. Its counter resets when the server restarts.
+      </p>
+    </main>
+  </body>
+</html>

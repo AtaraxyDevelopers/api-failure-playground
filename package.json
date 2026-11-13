@@ -1,0 +1,23 @@
+{
+  "name": "@ataraxydevelopers/api-failure-playground",
+  "version": "0.1.0",
+  "description": "A local HTTP API for exercising slow, failed, expired, and rate-limited responses.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "author": "Ataraxy Developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AtaraxyDevelopers/api-failure-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AtaraxyDevelopers/api-failure-playground/issues"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/cli.mjs",
+    "demo": "node examples/client.mjs"
+  }
+}
