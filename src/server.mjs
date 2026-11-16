@@ -49,6 +49,11 @@ export function createPlayground({ delayMs = 1500 } = {}) {
       res.writeHead(200, { 'Content-Type': file.endsWith('.js') ? 'text/javascript' : 'text/css' });
       return res.end(await fs.readFile(new URL('../public/' + file, import.meta.url)));
     }
+    if (url.pathname === '/ataraxy-developers-logo.png') {
+      const data = await fs.readFile(new URL('../public/ataraxy-developers-logo.png', import.meta.url));
+      res.writeHead(200, { 'Content-Type': 'image/png', 'X-Content-Type-Options': 'nosniff' });
+      return res.end(data);
+    }
     if (url.pathname === '/health') return send(200, { ok: true });
     if (url.pathname === '/scenarios') return send(200, { scenarios });
     if (url.pathname !== '/api/items') return send(404, { error: 'Not found' });
